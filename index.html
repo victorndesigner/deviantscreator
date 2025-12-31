@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta property="og:title" content="Bolt Texturas" />
+    <meta property="og:description" content="O maior criador de texturas está no Once • Human!" />
+    <meta property="og:image" content="https://raw.githubusercontent.com/victorndesigner/oncehuman/main/img/icon.png" />
+    <meta property="og:url" content="https://deviantscreator.bolttexturas.site/" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="bolttexturas" />
+    <meta property="og:locale" content="pt_BR" />
+    <meta property="og:image:alt" content="Banner Bolt Texturas" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="1200" />
+    <link rel="icon" type="image/png"
+        href="https://raw.githubusercontent.com/victorndesigner/oncehuman/main/img/icon.png">
+    <meta name="twitter:image"
+        content="https://raw.githubusercontent.com/victorndesigner/oncehuman/main/img/icon.png" />
+    <meta name="theme-color" content="#8c00ff" />
+    <title>Criador de Deviants • bolttexturas</title>
+    <link rel="stylesheet" href="assets/style.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700;800&family=Poppins:wght@300;400;600;700;800&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <!-- Background Particles -->
+    <canvas id="particulas-canvas"></canvas>
+
+    <header class="navbar">
+        <div class="logo-container">
+            <img src="assets/imagens/icon.png" alt="Icon" class="logo-icon">
+            <div class="logo-text">bolttexturas</div>
+        </div>
+
+        <!-- Desktop Nav -->
+        <nav class="navbar-links">
+            <a href="/sugestoes">Sugestão</a>
+            <a href="https://traits.bolttexturas.site/">Guia de Traços</a>
+            <a href="/" class="active">Início</a>
+        </nav>
+
+        <!-- Mobile Hamburger -->
+        <div class="hamburger-menu" id="hamburgerBtn">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </header>
+
+    <!-- Mobile Sidebar overlay -->
+    <div class="mobile-sidebar" id="mobileSidebar">
+        <div class="sidebar-header">
+            <div class="close-btn" id="closeSidebar">×</div>
+        </div>
+        <div class="sidebar-links">
+            <a href="/sugestoes">Sugestão</a>
+            <a href="https://traits.bolttexturas.site/">Guia de Traços</a>
+            <a href="/" class="active">Início</a>
+        </div>
+    </div>
+
+    <main class="builder-layout">
+        <h1 class="main-title">CRIADOR DE <span>DEVIANTES</span></h1>
+
+        <div class="builder-panel">
+            <!-- Left: Preview / Carousel -->
+            <div class="preview-section">
+                <!-- 3D Wrapper for the image container only -->
+                <div class="image-preview-wrapper-3d">
+                    <div class="image-preview-container">
+                        <img id="previewImage" src="assets/imagens/fundo.png" alt="Deviant Preview">
+                        <div class="glow-effect"></div>
+                    </div>
+                </div>
+                <!-- Controls EXTERNAL to 3D element (Below) -->
+                <div class="carousel-nav" id="carouselNav" style="display: none;">
+                    <button class="nav-arrow prev">❮</button>
+                    <button class="nav-arrow next">❯</button>
+                </div>
+            </div>
+
+            <!-- Right: Controls -->
+            <div class="controls-section">
+                <!-- Search -->
+                <div class="search-wrapper">
+                    <input type="text" id="deviantSearch" placeholder="Pesquise o deviant..." autocomplete="off">
+                    <div id="searchResults" class="search-results"></div>
+                </div>
+
+                <!-- Traits Form -->
+                <div id="traitsSection" class="traits-section" style="display: none;">
+                    <div class="deviant-header">
+                        <h3 id="deviantNameDisplay">Nome do Deviant</h3>
+                        <div id="deviantBadge" class="type-badge">TYPE</div>
+                    </div>
+
+                    <div class="slots-container" id="slotsContainer"></div>
+
+                    <div class="actions">
+                        <button id="createBtn" class="main-btn">CRIAR DEVIANT</button>
+                    </div>
+                </div>
+
+                <!-- Prompt inicial -->
+                <div id="startPrompt" class="start-prompt">
+                    <p>Busque um deviante na barra de pesquisa acima...</p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Overlay Generated Card -->
+    <div id="generatedOverlay" class="overlay">
+        <!-- Scale Wrapper for Responsiveness -->
+        <div class="generated-card-container">
+            <div id="finalCard" class="generated-card">
+                <!-- Card content generated by JS -->
+            </div>
+
+            <div class="overlay-actions">
+                <button id="saveBtn" class="main-btn">Salvar</button>
+                <button id="backBtn" class="secondary-btn">Voltar</button>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <span>Direitos reservados &copy;</span> <a href="https://oncehuman.bolttexturas.site/">bolttexturas</a>
+    </footer>
+
+    <script src="assets/deviants_data.js"></script>
+    <script src="https://html2canvas.hertzen.com/dist/html2canvas.min.js"></script>
+    <script src="assets/builder.js"></script>
+</body>
+
+</html>
