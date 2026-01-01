@@ -39,10 +39,17 @@
             font-size: 2.5rem;
             font-weight: 800;
             margin-bottom: 20px;
-            background: linear-gradient(135deg, #fff, #8400ff);
+            background: linear-gradient(135deg, #1e0036, #8400ff);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
+            transition: var(--transicao);
+            cursor: default;
+        }
+
+        .thank-you-title:hover {
+            transform: scale(1.02);
+            filter: drop-shadow(0 0 15px #9900ff42);
         }
 
         .thank-you-text {
