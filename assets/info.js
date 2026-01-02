@@ -68,21 +68,40 @@ document.addEventListener('DOMContentLoaded', () => {
             let count = 0;
             Object.keys(deviants[type]).forEach(cat => {
                 deviants[type][cat].forEach(dev => {
-                    if (searchTerm === "" || dev.nome.toLowerCase().includes(searchTerm)) {
-                        const item = document.createElement('div');
-                        item.className = 'info-item';
-                        item.innerHTML = `
-                            <div class="info-item-thumb">
-                                <img src="${dev.imgs ? dev.imgs[0] : dev.img}" alt="${dev.nome}">
-                            </div>
-                            <div class="info-item-details">
-                                <span class="item-name">${dev.nome}</span>
-                                <span class="item-cat">${cat}</span>
-                            </div>
-                        `;
-                        list.appendChild(item);
-                        count++;
-                    }
+                    const images = dev.imgs || [dev.img];
+                    images.forEach((img, index) => {
+                        let variantName = dev.nome;
+                        let displayCat = cat; // Category underneath remains original (Combate, etc)
+
+                        // Index 0 is base, index 1+ are variants
+                        const vIndex = index;
+                        if (index > 0) {
+                            if (typeof variantTraits !== 'undefined' && variantTraits[dev.nome] && variantTraits[dev.nome][vIndex]) {
+                                const vt = variantTraits[dev.nome][vIndex];
+                                // Name format: BaseName - Label
+                                variantName = `${dev.nome} - ${vt.label || "Variante"}`;
+                            } else {
+                                // Fallback: BaseName - Variante
+                                variantName = `${dev.nome} - Variante`;
+                            }
+                        }
+
+                        if (searchTerm === "" || variantName.toLowerCase().includes(searchTerm)) {
+                            const item = document.createElement('div');
+                            item.className = 'info-item';
+                            item.innerHTML = `
+                                <div class="info-item-thumb">
+                                    <img src="${img}" alt="${variantName}">
+                                </div>
+                                <div class="info-item-details">
+                                    <span class="item-name">${variantName}</span>
+                                    <span class="item-cat">${displayCat}</span>
+                                </div>
+                            `;
+                            list.appendChild(item);
+                            count++;
+                        }
+                    });
                 });
             });
 
