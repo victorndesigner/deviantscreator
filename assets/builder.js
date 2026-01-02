@@ -188,25 +188,16 @@ document.addEventListener('DOMContentLoaded', () => {
 
         const isCaos = dev.type === 'CAOS';
 
-        // --- NEW MODULAR VARIANT LOGIC (V26.1) ---
-        let variantTrait = null;
+        // --- NEW UNIVERSAL VARIANT LOGIC (V28) ---
+        let variantData = null;
         if (typeof variantTraits !== 'undefined' && variantTraits[dev.nome]) {
-            variantTrait = variantTraits[dev.nome][currentImageIndex];
+            variantData = variantTraits[dev.nome][currentImageIndex];
         }
 
         let slotsConfig = [];
 
-        // If a fixed trait is defined for this specific image index, use it in Slot 1
-        if (variantTrait) {
-            slotsConfig = [
-                { label: "Slot 1 (Shine)", fixed: variantTrait },
-                { label: "Slot 2 (Secundário)", pool: traitsData["Slot Secundário"][dev.category] || [] },
-                { label: "Slot 3 (Custom)", pool: traitsData["Custom"] },
-                { label: "Slot 4 (Terciário)", pool: traitsData["Slot Terciário"] }
-            ];
-        }
-        // Logic for CAOS
-        else if (isCaos) {
+        // Base Configuration
+        if (isCaos) {
             slotsConfig = [
                 { label: "Slot 1 (Primário)", pool: traitsData["Slot Primário"] },
                 { label: "Slot 2 (Secundário)", pool: traitsData["Slot Secundário"][dev.category] || [] },
@@ -214,15 +205,24 @@ document.addEventListener('DOMContentLoaded', () => {
                 { label: "Slot 4 (Custom)", pool: traitsData["Custom"] },
                 { label: "Slot 5 (Terciário)", pool: traitsData["Slot Terciário"] }
             ];
-        }
-        // Standard Logic
-        else {
+        } else {
             slotsConfig = [
                 { label: "Slot 1 (Primário)", pool: traitsData["Slot Primário"] },
                 { label: "Slot 2 (Secundário)", pool: traitsData["Slot Secundário"][dev.category] || [] },
                 { label: "Slot 3 (Custom)", pool: traitsData["Custom"] },
                 { label: "Slot 4 (Terciário)", pool: traitsData["Slot Terciário"] }
             ];
+        }
+
+        // Apply Universal Overrides (Universal System V28)
+        if (variantData) {
+            const sIdx = variantData.slot - 1; // 1-based to 0-based
+            if (slotsConfig[sIdx]) {
+                slotsConfig[sIdx] = {
+                    label: `Slot ${variantData.slot} (${variantData.label})`,
+                    fixed: variantData.trait
+                };
+            }
         }
 
         slotsConfig.forEach((cfg) => {

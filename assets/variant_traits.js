@@ -1,28 +1,24 @@
 /**
- * DEFINIÇÃO DE TRAÇOS PARA VARIANTES (SHINE)
- * Aqui você pode configurar o traço fixo que aparecerá para cada versão do Deviante.
+ * DEFINIÇÃO DE TRAÇOS PARA VARIANTES (SHINE/OUTROS)
  * 
- * Estrutura:
- * "NOME DO DEVIANTE": {
- *    "Índice da Imagem": "Nome do Traço"
- * }
- * 
- * Lembre-se:
- * Índice 0 = Versão Padrão (Slot 1 é livre)
- * Índice 1 = Versão 2
- * Índice 2 = Versão 3
- * ... e assim por diante.
+ * Agora você pode escolher:
+ * 1. O nome do traço (trait)
+ * 2. O rótulo/categoria (label) - Ex: "Lunar", "Infrassônica", "Shine"
+ * 3. O índice do slot (slot) - 1, 2, 3 ou 4
  */
 
 const variantTraits = {
     "Donzela": {
-        1: "Donzela bruxa"
+        1: { trait: "Donzela bruxa", label: "Shine", slot: 1 }
     },
     "Cebola": {
-        1: "Cebola Roxa"
+        1: { trait: "Cebola Roxa", label: "Shine", slot: 1 },
+        2: { trait: "Cebola Dourada", label: "Shine", slot: 1 }
     },
-    "Teddy": {
-        1: "Teddy Natalino"
+    "Chaossauro": {
+        1: { trait: "Chaossauro_shine", label: "Shine", slot: 1 }
+    },
+    "Zapcam": {
+        1: { trait: "ZapCam - Oráculo Lunar", label: "Lunar", slot: 1 }
     }
-    // Adicione novos deviantes e seus traços aqui seguindo o padrão
 };
