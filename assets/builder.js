@@ -202,14 +202,14 @@ document.addEventListener('DOMContentLoaded', () => {
                 { label: "Slot 1 (Primário)", pool: traitsData["Slot Primário"] },
                 { label: "Slot 2 (Secundário)", pool: traitsData["Slot Secundário"][dev.category] || [] },
                 { label: "Slot 3 (Caos)", fixed: "CAOS" },
-                { label: "Slot 4 (Custom)", pool: traitsData["Custom"] },
+                { label: "Slot 4 (Enfeite)", pool: traitsData["Enfeite"] },
                 { label: "Slot 5 (Terciário)", pool: traitsData["Slot Terciário"] }
             ];
         } else {
             slotsConfig = [
                 { label: "Slot 1 (Primário)", pool: traitsData["Slot Primário"] },
                 { label: "Slot 2 (Secundário)", pool: traitsData["Slot Secundário"][dev.category] || [] },
-                { label: "Slot 3 (Custom)", pool: traitsData["Custom"] },
+                { label: "Slot 3 (Enfeite)", pool: traitsData["Enfeite"] },
                 { label: "Slot 4 (Terciário)", pool: traitsData["Slot Terciário"] }
             ];
         }
