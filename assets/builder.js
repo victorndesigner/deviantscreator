@@ -292,7 +292,16 @@ document.addEventListener('DOMContentLoaded', () => {
             if (!selectedDeviant) return;
             const inputs = slotsContainer.querySelectorAll('select, input');
             const finalTraits = [];
-            inputs.forEach(inp => { if (inp.value && inp.value !== "") finalTraits.push(inp.value); });
+
+            inputs.forEach(inp => {
+                if (inp.value && inp.value !== "") {
+                    finalTraits.push({
+                        name: inp.value,
+                        isFixed: inp.classList.contains('fixed') || inp.value === 'CAOS'
+                    });
+                }
+            });
+
             if (finalCard) finalCard.className = `generated-card ${selectedDeviant.type === 'CAOS' ? 'style-caos' : 'style-padrao'}`;
 
             let safeIndex = currentImageIndex;
@@ -313,7 +322,9 @@ document.addEventListener('DOMContentLoaded', () => {
             <div class="card-visual"><img src="${imgSrc}" width="600" height="600" alt="Deviant" style="display: block;"></div>
             <div class="card-content">
                 <div class="card-header-text"><h2>${selectedDeviant.nome}</h2><span class="card-category">${selectedDeviant.category}</span></div>
-                <div class="card-traits-grid">${traits.map(t => `<div class="trait-tag ${t === 'CAOS' ? 'trait-caos' : ''}">${t}</div>`).join('')}</div>
+                <div class="card-traits-grid">
+                    ${traits.map(t => `<div class="trait-tag ${t.isFixed ? 'trait-gold' : ''}">${t.name}</div>`).join('')}
+                </div>
                 <div class="watermark">deviant criado • bolttexturas</div>
             </div>`;
         if (overlay) overlay.classList.add('active');

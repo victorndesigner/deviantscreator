@@ -806,6 +806,13 @@ footer a:hover {
     margin-bottom: 40px !important;
 }
 
+.trait-tag.trait-gold {
+    border-color: #ffd700;
+    background: rgba(255, 215, 0, 0.15);
+    color: #ffd700;
+    box-shadow: 0 0 15px rgba(255, 215, 0, 0.1);
+}
+
 .trait-tag.trait-caos {
     border-color: var(--caos-gold);
     background: rgba(255, 215, 0, 0.1);
