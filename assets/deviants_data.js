@@ -14,7 +14,7 @@ const deviants = {
             { id: "cebola_padrao_combate", nome: "Cebola", imgs: ["assets/deviants/PADRAO/combate/cebola/cebola1.png", "assets/deviants/PADRAO/combate/cebola/cebola2.png"], type: "PADRAO", category: "Combate" },
             { id: "donzela_padrao_combate", nome: "Donzela", imgs: ["assets/deviants/PADRAO/combate/donzela/donzela1.png", "assets/deviants/PADRAO/combate/donzela/donzela2.png"], type: "PADRAO", category: "Combate" },
             { id: "teddy_padrao_combate", nome: "Teddy", imgs: ["assets/deviants/PADRAO/combate/teddy/teddy1.png", "assets/deviants/PADRAO/combate/teddy/teddy2.png"], type: "PADRAO", category: "Combate" },
-            { id: "zapcam_padrao_combate", nome: "Zapcam", imgs: ["assets/deviants/PADRAO/combate/zapcam/zapcam1.png", "assets/deviants/PADRAO/combate/zapcam/zapcam2.png"], type: "PADRAO", category: "Combate" },
+            { id: "zapcam_padrao_combate", nome: "Zapcam", imgs: ["assets/deviants/PADRAO/combate/zapcam/zapcam1.png", "assets/deviants/PADRAO/combate/zapcam/zapcam2.png", "assets/deviants/PADRAO/combate/zapcam/zapcam3.png"], type: "PADRAO", category: "Combate" },
             { id: "vazio_padrao_combate", nome: "Vazio", imgs: ["assets/deviants/PADRAO/combate/vazio/vazio1.png"], type: "PADRAO", category: "Combate" }
         ],
         "Territorio": [
