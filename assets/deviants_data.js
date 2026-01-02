@@ -51,7 +51,7 @@ const traitsData = {
     "Slot Secundário": {
         "Combate": {
             "Combate": [
-                "Criança Psíquica", "Tiro Preciso", "Pesado e Sólido"
+                "Criança Psíquica", "Tiro Certeiro", "Pesado e Sólido"
             ],
             "Penalidades": [
                 "Sedentário", "Fique em Casa", "Rei do Poder", "Força Bruta",
@@ -89,7 +89,7 @@ const traitsData = {
             "Simbiose Ruim - Javali",
             "Regras da Força Bruta - Urso",
             "Animal Polar - Rinoceronte",
-            "Ataque à Luz da Lua - Lobo",
+            "Ataque ao Luar",
             "Pesadelo das Águas - Crocodilo",
             "Massagem Mental - Capivara",
             "Criaturas Felinas - Leopardo"
@@ -107,10 +107,10 @@ const traitsData = {
             "Limpa e Higienizada - Pia"
         ]
     },
-    "Custom": [
+    "Enfeite": [
         "Bônus de dano elemental",
         "Ataque",
-        "Dano critico",
+        "Dano Crítico",
         "PV"
     ]
 };
