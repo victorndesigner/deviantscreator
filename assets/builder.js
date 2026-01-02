@@ -58,7 +58,12 @@ document.addEventListener('DOMContentLoaded', () => {
        SEARCH LOGIC
        ========================================= */
     if (searchInput && searchResults) {
-        // Refresh allDeviants on focus to ensure data sync
+        // [x] Informações UI Refinements & Fixes (V31) <!-- id: 11 -->
+        // [ ] Informações Detail Polish & Footer Sync (V32) <!-- id: 12 -->
+        //     [ ] Fix trait item hover border (ensure full 4-side border)
+        //     [ ] Add hover effect to toggle buttons
+        //     [ ] Change category header text color to white
+        //     [ ] sync footer across all pages (2025 + simplified text)
         searchInput.addEventListener('focus', () => {
             allDeviants.length = 0;
             if (typeof deviants !== 'undefined') {
