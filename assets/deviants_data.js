@@ -108,9 +108,9 @@ const traitsData = {
         ]
     },
     "Enfeite": [
-        "Bônus de dano elemental",
-        "Ataque",
-        "Dano Crítico",
-        "PV"
+        "Bônus de dano elemental - 3",
+        "Ataque - 3",
+        "Dano Crítico - 3",
+        "PV - 3"
     ]
 };

@@ -14,7 +14,7 @@ const variantTraits = {
     "Cebola": {
         1: { trait: "Cebola Roxa", label: "Variante", slot: 1 },
     },
-    "Zapcam": {
+    "ZapCam": {
         1: { trait: "ZapCam - Oráculo Lunar", label: "Lunar", slot: 1 },
         2: { trait: "ZapCam - Memória do Tolo", label: "Variante", slot: 1 }
     }
