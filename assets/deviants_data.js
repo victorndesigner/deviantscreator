@@ -29,7 +29,7 @@ const deviants = {
 const traitsData = {
     "Slot Primário": {
         "Combate": [
-            "Vantagem Suprema", "Energia Estável", "Vitalidade Estável"
+            "Vantagem", "Energia Estável", "Vitalidade Estável"
         ],
         "Humor": [
             "Otimista 1", "Otimista 2", "Otimista 3", "Otimista 4", "Otimista 5"
@@ -39,7 +39,7 @@ const traitsData = {
         ],
         "Recuperação": [
             "Desperte e Brilhe 1", "Desperte e Brilhe 2", "Desperte e Brilhe 3", "Desperte e Brilhe 4", "Desperte e Brilhe 5",
-            "Reverter de Poder 1", "Reverter de Poder 2"
+            "Reverter Poder 1", "Reverter Poder 2"
         ],
         "Penalidades": [
             "Dores de Crescimento 1", "Dores de Crescimento 2", "Dores de Crescimento 3",
@@ -51,7 +51,7 @@ const traitsData = {
     "Slot Secundário": {
         "Combate": {
             "Combate": [
-                "Criança Psíquica", "Tiro Certeiro", "Pesado e Sólido"
+                "Garoto Psíquico", "Tiro Certeiro", "Pesado e Sólido"
             ],
             "Penalidades": [
                 "Sedentário", "Fique em Casa", "Rei do Poder", "Força Bruta",
@@ -83,34 +83,33 @@ const traitsData = {
     },
     "Slot Terciário": {
         "Animais": [
-            "Grunhido Superior - Búfalo",
-            "Herbívoro - Cervo",
-            "Herbívoro - Cabra",
-            "Simbiose Ruim - Javali",
-            "Regras da Força Bruta - Urso",
-            "Animal Polar - Rinoceronte",
+            "Grunhido Superior",
+            "Herbívoro",
+            "Simbiose Ruim",
+            "Regras da Força Bruta",
+            "Animal Polar",
             "Ataque ao Luar",
-            "Pesadelo das Águas - Crocodilo",
-            "Massagem Mental - Capivara",
-            "Criaturas Felinas - Leopardo"
+            "Pesadelo das Águas",
+            "Massagem Mental",
+            "Criaturas Felinas"
         ],
         "Móveis": [
-            "Ressonância Musical - Jukebox",
-            "Adaptação à Poluição - Vaso Moderno",
-            "Momento de Precisão - Relógio de Mesa",
-            "Carga Extra - Caixa",
-            "Cintilação de Néon - Like",
-            "Cavaleiros da Távola Redonda - Mesa",
-            "Mestre das Temperaturas - Ventilador",
-            "Chama Quente - Candelabro",
-            "Eureka - Luz Sinal Pequena",
-            "Limpa e Higienizada - Pia"
+            "Ressonância Musical",
+            "Adaptação à Poluição",
+            "Momento de Precisão",
+            "Carga Extra",
+            "Cintilação de Néon",
+            "Cavaleiros da Távola Redonda",
+            "Mestre das Temperaturas",
+            "Chama Quente",
+            "Momento Eureka",
+            "Limpa e Higienizada"
         ]
     },
     "Enfeite": [
         "Bônus de dano elemental - 3",
         "Ataque - 3",
-        "Dano Crítico - 3",
+        "Dano Crít. - 3",
         "PV - 3"
     ]
 };
