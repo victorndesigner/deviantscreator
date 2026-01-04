@@ -330,7 +330,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 <div class="card-traits-grid">
                     ${traits.map(t => `<div class="trait-tag ${t.isFixed ? 'trait-gold' : ''}">${t.name}</div>`).join('')}
                 </div>
-                <div class="watermark">deviant criado • bolttexturas</div>
+                <div class="watermark">deviante criado • bolttexturas</div>
             </div>`;
         if (overlay) overlay.classList.add('active');
     }
@@ -486,3 +486,4 @@ document.addEventListener('DOMContentLoaded', () => {
         animate();
     }
 });
+
